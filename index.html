@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Islomdoors — MDF Doors</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{
+height:100vh;
+background:url("images/hero.jpg") center/cover no-repeat;
+color:#fff;
+position:relative;
+}
+body::before{
+content:"";
+position:absolute;
+inset:0;
+background:rgba(0,0,0,.45);
+}
+
+header{
+position:relative;
+z-index:2;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 40px;
+}
+.logo{font-weight:bold;font-size:22px}
+.center{font-size:26px;font-weight:bold}
+nav a{
+margin-left:20px;
+color:#fff;
+text-decoration:none;
+font-weight:bold;
+}
+
+.lang{
+position:absolute;
+bottom:15%;
+left:50%;
+transform:translateX(-50%);
+text-align:center;
+z-index:2;
+animation:fade 1.2s;
+}
+.lang h2{margin-bottom:20px}
+.lang button{
+padding:14px 36px;
+font-size:18px;
+border:none;
+border-radius:30px;
+margin:0 10px;
+cursor:pointer;
+transition:.4s;
+}
+.lang button:hover{transform:scale(1.1)}
+
+@keyframes fade{
+from{opacity:0;transform:translate(-50%,40px)}
+to{opacity:1;transform:translate(-50%,0)}
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="logo">Islomdoors</div>
+<div class="center">МДФ ДВЕРИ</div>
+<nav>
+<a>ГЛАВНАЯ</a>
+<a>КАТАЛОГ</a>
+<a>О КОМПАНИИ</a>
+<a>КОНТАКТЫ</a>
+</nav>
+</header>
+
+<div class="lang">
+<h2>Выберите язык / Tilni tanlang</h2>
+<button onclick="go('ru')">Русский</button>
+<button onclick="go('uz')">O‘zbek</button>
+</div>
+
+<script>
+function go(lang){
+document.body.style.opacity="0";
+setTimeout(()=>{
+window.location.href = lang==="ru" ? "index-ru.html" : "index-uz.html";
+},500);
+}
+</script>
+
+</body>
+</html>

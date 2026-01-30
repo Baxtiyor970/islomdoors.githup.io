@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Islomdoors — МДФ двери в Ташкенте</title>
+<meta name="description" content="Islomdoors — производство и продажа МДФ дверей. Классика, неоклассика, современные двери.">
+<meta name="keywords" content="МДФ двери, двери Ташкент, Islomdoors">
+<meta name="robots" content="index, follow">
+
+<link rel="alternate" hreflang="ru" href="index-ru.html">
+<link rel="alternate" hreflang="uz" href="index-uz.html">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:#f5f5f5;color:#222}
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 40px;
+background:#fff;
+position:sticky;
+top:0;
+}
+.logo{font-weight:bold;font-size:22px}
+.center{font-size:24px;font-weight:bold}
+nav a{
+margin-left:20px;
+font-weight:bold;
+cursor:pointer;
+}
+
+.products{
+display:flex;
+gap:30px;
+justify-content:center;
+padding:60px 20px;
+flex-wrap:wrap;
+}
+.product{
+width:260px;
+background:#fff;
+border-radius:12px;
+overflow:hidden;
+box-shadow:0 8px 15px rgba(0,0,0,.15);
+}
+.product img{
+width:100%;
+height:280px;
+object-fit:cover;
+}
+.product div{text-align:center;padding:10px}
+
+#contacts{
+position:fixed;
+bottom:-300px;
+left:0;
+right:0;
+background:#111;
+color:#fff;
+padding:30px;
+text-align:center;
+transition:.5s;
+}
+#contacts.active{bottom:0}
+#contacts a{color:#4fc3f7}
+
+footer{
+background:#000;
+color:#fff;
+text-align:center;
+padding:20px;
+}
+</style>
+
+<script type="application/ld+json">
+{
+"@context":"https://schema.org",
+"@type":"LocalBusiness",
+"name":"Islomdoors",
+"telephone":"+998942216969",
+"sameAs":["https://t.me/NavaimdfEshiklari"]
+}
+</script>
+
+</head>
+<body>
+
+<header>
+<div class="logo">Islomdoors</div>
+<div class="center">МДФ ДВЕРИ</div>
+<nav>
+<a>ГЛАВНАЯ</a>
+<a>КАТАЛОГ</a>
+<a>О КОМПАНИИ</a>
+<a onclick="toggle()">КОНТАКТЫ</a>
+</nav>
+</header>
+
+<section class="products">
+<div class="product"><img src="images/door1.jpg"><div>Классика</div></div>
+<div class="product"><img src="images/door2.jpg"><div>Неоклассика</div></div>
+<div class="product"><img src="images/door3.jpg"><div>Хайтек</div></div>
+</section>
+
+<div id="contacts">
+<p>📞 +998 94-221-69-69</p>
+<p>📲 <a href="https://t.me/NavaimdfEshiklari" target="_blank">Telegram</a></p>
+</div>
+
+<footer>© 2026 Islomdoors</footer>
+
+<script>
+function toggle(){
+document.getElementById("contacts").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
